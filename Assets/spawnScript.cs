@@ -5,7 +5,7 @@ using UnityEngine;
 public class spawnScript : MonoBehaviour
 {
     float time = 0;
-    float timer = 1;
+    float timer = 2;
 
     public GameObject pipa;
     // Start is called before the first frame update

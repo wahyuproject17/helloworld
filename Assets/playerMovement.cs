@@ -6,11 +6,11 @@ using UnityEngine.UI;
 public class playerMovement : MonoBehaviour
 {
     Rigidbody2D Rb;
-    public float jumpForce;
 
     float score;
 
     public Text scoreTxt;
+    public float speed = 30;
 
     // Start is called before the first frame update
     void Start()
@@ -19,18 +19,17 @@ public class playerMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         scoreTxt.text = "" + score;
-        if(Input.GetMouseButtonDown(0)){
-            Rb.velocity = Vector2.up * jumpForce;
-        }
+        float v = Input.GetAxisRaw("Vertical");
+        GetComponent<Rigidbody2D>().velocity = new Vector2(0, v) * speed;
     }
     private void OnTriggerEnter2D(Collider2D collision){
         if(collision.gameObject.tag=="point"){
             score++;
         }
-        if(collision.gameObject.tag == "pipa"){
+        if(collision.gameObject.tag == "trap"){
             Destroy(gameObject);
         }
     }

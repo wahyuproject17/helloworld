@@ -59,13 +59,15 @@
     <UnityVersion>2022.3.19f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Analyzer Include="C:\Users\ThinkPad\.vscode\extensions\visualstudiotoolsforunity.vstuc-0.9.4\Analyzers\Microsoft.Unity.Analyzers.dll" />
     <Analyzer Include="D:\App\Unity Hub\2022.3.19f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
     <Analyzer Include="D:\App\Unity Hub\2022.3.19f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\trapScript.cs" />
     <Compile Include="Assets\spawnScript.cs" />
     <Compile Include="Assets\playerMovement.cs" />
-    <Compile Include="Assets\pipeScript.cs" />
+    <Compile Include="Assets\sceneMove.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
